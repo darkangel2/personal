@@ -4,58 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invitation</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>John & Jane's Wedding</h1>
-    <p>Join us on <strong>June 15, 2025</strong></p>
-  </header>
-
-  <section id="schedule">
-    <h2>Schedule</h2>
-    <ul>
-      <li><strong>4:00 PM:</strong> Ceremony</li>
-      <li><strong>6:00 PM:</strong> Reception</li>
-      <li><strong>8:00 PM:</strong> Dinner</li>
-    </ul>
-  </section>
-
-  <section id="location">
-    <h2>Location</h2>
-    <p>Wedding Venue: The Grand Hall</p>
-    <a href="https://maps.google.com">View on Google Maps</a>
-  </section>
-
-  <section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-      <img src="images/photo1.jpg" alt="Photo 1">
-      <img src="images/photo2.jpg" alt="Photo 2">
-    </div>
-  </section>
-
-  <section id="rsvp">
-    <h2>RSVP</h2>
-    <p>Please let us know if you can make it!</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <button type="submit">Send RSVP</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>We can't wait to celebrate with you!</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation</title>
   <style>
     /* General Styling */
     body {
@@ -100,11 +48,65 @@
       background-color: #264653;
       color: white;
     }
+
+    /* Additional Styling */
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    section#schedule ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    section#schedule ul li {
+      background-color: #e9c46a;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    section#location a {
+      text-decoration: none;
+      color: #e76f51;
+    }
+
+    section#location a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    form input, form button {
+      width: calc(100% - 22px);
+      max-width: 300px;
+      margin: 5px auto;
+      display: block;
+    }
+
+    form button {
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #21867a;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>John & Jane's Wedding</h1>
+    <h1>A & R's Wedding</h1>
     <p>Join us on <strong>June 15, 2025</strong></p>
     <p id="countdown"></p>
   </header>
