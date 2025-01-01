@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>John & Jane's Wedding</h1>
+    <p>Join us on <strong>June 15, 2025</strong></p>
+  </header>
+
+  <section id="schedule">
+    <h2>Schedule</h2>
+    <ul>
+      <li><strong>4:00 PM:</strong> Ceremony</li>
+      <li><strong>6:00 PM:</strong> Reception</li>
+      <li><strong>8:00 PM:</strong> Dinner</li>
+    </ul>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>Wedding Venue: The Grand Hall</p>
+    <a href="https://maps.google.com">View on Google Maps</a>
+  </section>
+
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <img src="images/photo2.jpg" alt="Photo 2">
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Please let us know if you can make it!</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Send RSVP</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>We can't wait to celebrate with you!</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #fdf6e3;
+      color: #333;
+    }
+
+    header {
+      background-color: #f4a261;
+      color: #fff;
+      padding: 20px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    h2 {
+      color: #2a9d8f;
+    }
+
+    .gallery img {
+      width: 150px;
+      margin: 5px;
+      border-radius: 10px;
+    }
+
+    form input, form button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #264653;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>John & Jane's Wedding</h1>
+    <p>Join us on <strong>June 15, 2025</strong></p>
+    <p id="countdown"></p>
+  </header>
+
+  <section id="schedule">
+    <h2>Schedule</h2>
+    <ul>
+      <li><strong>4:00 PM:</strong> Ceremony</li>
+      <li><strong>6:00 PM:</strong> Reception</li>
+      <li><strong>8:00 PM:</strong> Dinner</li>
+    </ul>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>Wedding Venue: The Grand Hall</p>
+    <a href="https://maps.google.com" target="_blank">View on Google Maps</a>
+  </section>
+
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/150" alt="Photo 1">
+      <img src="https://via.placeholder.com/150" alt="Photo 2">
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Please let us know if you can make it!</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Send RSVP</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>We can't wait to celebrate with you!</p>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    const weddingDate = new Date("2025-06-15T16:00:00");
+    const countdown = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = weddingDate - now;
+
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        countdown.textContent = `Only ${days} days left!`;
+      } else {
+        countdown.textContent = "It's wedding day!";
+      }
+    }
+
+    updateCountdown(); // Call immediately to show initial value
+    setInterval(updateCountdown, 1000); // Update every second
+  </script>
+</body>
+</html>
